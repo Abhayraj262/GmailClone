@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from './components/ui/Navbar'
-import Sidebar from './components/Sidebar'
-import { createBrowserRouter } from 'react-router-dom'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Body from './components/Body'
 import Inbox from './components/Inbox'
+import Mail from './components/Mail'
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,8 @@ const App = () => {
   return (
     <div className="bg-[#F6F8FC] w-screen h-screen overflow-hidden">
       <Navbar/>
-      <Sidebar/>
+      <RouterProvider router={router}/>
+      
     </div> 
   )
 }
